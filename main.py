@@ -1,8 +1,6 @@
-import requests
-import tkinter as tk
 from tkinter import filedialog
-from tkinter.filedialog import asksaveasfile
 import os
+import requests
 
 from lib.region_codes import regions
 import lib.utils.functions as utils
@@ -21,7 +19,8 @@ print('Conectando à API de Inadimplência Regional do BCB ...')
 
 i = 1
 for key in keys:
-    response = requests.get(f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.{regions[key]}/dados?formato=json&dataInicial={initial_date}&dataFinal={end_date}")
+    response = requests.get("https://api.bcb.gov.br/dados/serie/bcdata.sgs."
+    f"{regions[key]}/dados?formato=json&dataInicial={initial_date}&dataFinal={end_date}")
     data_frame_dict['Estado'].append(key)
     data_frame_dict['Valor'].append(response.json()[0]['valor'])
     print(f'{i} - {key} ✔ ({int((i/27)*100)}%)')
