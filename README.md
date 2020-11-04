@@ -20,15 +20,19 @@ no diretório que o mesmo escolher.</p>
 
 <h1>🚀 Instalação</h1>
 <p>Para fazer uso do projeto, pode-se clonar o mesmo com git:</p>
-```git
+<code>
 git clone https://github.com/eric-zanchettin/inadimplentes_bcb-api.git
-```
+</code>
 <p>Após isso, no ambiente Python, utilize:</p>
-```bash
+<code>
 pip install requests
+</code>
+<code>
 pip install pandas
+</code>
+<code>
 pip install openpyxl
-```
+</code>
 <p>Depois de configurado, basta rodar o .\main.py</p>
 <h1>Licença</h1>
 <a href="https://choosealicense.com/licenses/mit/">MIT</a>
